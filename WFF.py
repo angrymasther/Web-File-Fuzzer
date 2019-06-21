@@ -13,7 +13,7 @@ info = chr(27)+"[0;32m"+"""
      \/  \/ \___|_.__/  |_|    |_|_|\___| |_|   \__,_/___/___\___|_|   
                                                                    
 
-@Twitter:Angrymasther_
+
 """+chr(27)+"[0;37m" """
 
 Sintaxis:  python Bypass_Fuzzer.py [archivo diccionario] [url]
