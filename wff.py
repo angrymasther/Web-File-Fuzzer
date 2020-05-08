@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import requests
 import sys
 
@@ -37,15 +39,12 @@ def probar(direccion): #Funcion que prueba las direcciones
 
 try: #Abrimos el try por si el archivo no se encuentra
 	o = open(diccionario,"r") #abrimos el archivo
-
+	lineas = o.readlines() #Lista con las lineas del diccionario
+	for linea in lineas:
+		probado = probar(linea)
+		if probado != None:
+			print probado #probamos todas las lineas
+		if probado == 400:
+			print "La url a dado problemas, cumpruebala"
 except :
-	print "[!] Archivo no encontrado"
-
-lineas = o.readlines() #Lista con las lineas del diccionario
-
-for linea in lineas:
-	probado = probar(linea)
-	if probado != None:
-		print probado #probamos todas las lineas
-	if probado == 400:
-		print "La url a dado problemas, cumpruebala"
+	print "[!]ERROR, compruebe que a puesto los datos correctamente"
