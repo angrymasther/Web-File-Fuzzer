@@ -29,7 +29,7 @@ def probar(direccion): #Funcion que prueba las direcciones
 	completada = url + "/" + direccion  #Creamos una direccion completa
 	peticion = requests.get(completada) #Hacemos la peticion
 	if peticion.status_code == 200:
-		return completada 
+		return completada
 	if peticion.status_code == 400:
 		return 400
 	if peticion.status_code == 403:
@@ -38,7 +38,7 @@ def probar(direccion): #Funcion que prueba las direcciones
 try: #Abrimos el try por si el archivo no se encuentra
 	o = open(diccionario,"r") #abrimos el archivo
 
-except FileNotFoundError:
+except :
 	print "[!] Archivo no encontrado"
 
 lineas = o.readlines() #Lista con las lineas del diccionario
